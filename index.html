@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Factorization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Matrix Factorization</h1>
+        
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Enter your email">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <button id="loginBtn">Login</button>
+        
+        <div>
+            <label for="matrixInput">Matrix Input:</label>
+            <textarea id="matrixInput" placeholder='Enter a matrix like [[1, 2, 3], [4, 5, 6], [7, 8, 9]]'></textarea>
+        </div>
+        <button id="factorizeBtn">Factorize Matrix</button>
+        <button id="rotateBtn">Rotate Matrix</button>
+
+        <div class="result-container">
+            <h3>Factorization Results</h3>
+            <div id="resultOutput"></div>
+        </div>
+        <div class="result-container">
+            <h3>Rotated Matrix</h3>
+            <div id="matrixOutput"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
