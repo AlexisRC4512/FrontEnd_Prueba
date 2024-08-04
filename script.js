@@ -2,7 +2,7 @@ document.getElementById('loginBtn').addEventListener('click', async () => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const loginResponse = await fetch('https://go-app-1-0.onrender.com/login', {
+    const loginResponse = await fetch('http://localhost:3000/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -21,7 +21,7 @@ document.getElementById('factorizeBtn').addEventListener('click', async () => {
     const matrix = JSON.parse(document.getElementById('matrixInput').value);
     const token = localStorage.getItem('token');
 
-    const factorizeResponse = await fetch('https://go-app-1-0.onrender.com/factorize', {
+    const factorizeResponse = await fetch('http://localhost:3000/factorize', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ document.getElementById('rotateBtn').addEventListener('click', async () => {
     const matrix = JSON.parse(document.getElementById('matrixInput').value);
     const token = localStorage.getItem('token');
 
-    const rotateResponse = await fetch('https://go-app-1-0.onrender.com/getRotateMatriz', {
+    const rotateResponse = await fetch('http://localhost:3000/getRotateMatriz', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -61,7 +61,6 @@ document.getElementById('rotateBtn').addEventListener('click', async () => {
 
     const rotateData = await rotateResponse.json();
 
-    // Mostrar la matriz rotada de forma bonita
     const rotatedMatrix = rotateData.rotated_matrix.map(row => row.join(' ')).join('\n');
     document.getElementById('matrixOutput').textContent = rotatedMatrix;
 });
